@@ -17,7 +17,7 @@
 
 > Hi, I'm **Domingos Nascimento**.   
 > Software Engineer focused on building scalable web applications.
-> I design robust backends and APIs with **.NET** and **Node.js**, and build modern interfaces using **Next.js** and **Blazor**.
+ I design robust backends and APIs with **.NET** and **Node.js**, and build modern interfaces using **Next.js** and **Blazor**.
 
 ---
 
