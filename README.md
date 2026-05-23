@@ -9,6 +9,7 @@
 <!-- Estatísticas do perfil -->
 <div align="left">
   <img src="https://komarev.com/ghpvc/?username=Adyllsxn&color=00d9ff" alt="Profile views">
+  <img src="https://img.shields.io/badge/GitHub%20Grade-A%2B-00d9ff?logo=github" alt="GitHub grade">
   <img src="https://img.shields.io/github/followers/Adyllsxn?color=00d9ff&logo=github" alt="GitHub followers">
   <img src="https://img.shields.io/github/stars/Adyllsxn?color=00d9ff&logo=github" alt="GitHub stars">
 </div>
