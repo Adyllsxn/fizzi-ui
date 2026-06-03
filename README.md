@@ -34,6 +34,7 @@
 
 **Frontend**:
 ![Blazor](https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
 
 **Database & ORM**: 
