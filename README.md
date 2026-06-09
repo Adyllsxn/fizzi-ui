@@ -1,102 +1,83 @@
-**.NET • Node.js**
-
-<!-- Banner simplificado sem section=header -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&text=Full%20Stack%20Developer&fontSize=30&fontColor=00d9ff&animation=fadeIn&fontAlignY=35&desc=.NET%20%E2%80%A2%20Node.js&descSize=18&descAlignY=55" alt="Header" />
-</div>
-
-
-<!-- Estatísticas do perfil -->
-<div align="left">
-  <img src="https://komarev.com/ghpvc/?username=Adyllsxn&color=00d9ff" alt="Profile views">
-  <img src="https://img.shields.io/badge/GitHub%20Grade-A%2B-00d9ff?logo=github" alt="GitHub grade">
-  <img src="https://img.shields.io/github/followers/Adyllsxn?color=00d9ff&logo=github" alt="GitHub followers">
-  <img src="https://img.shields.io/github/stars/Adyllsxn?color=00d9ff&logo=github" alt="GitHub stars">
-</div>
-
-</br>
-
-> Hi, I'm **Domingos Nascimento**.   
-> Software Engineer focused on building scalable web applications.
-> I design robust backends and APIs with **.NET** and **Node.js**, and build modern interfaces using **Next.js** and **Blazor**.
-
----
-
-### 🛠️ Tech Stack
-
-**Languages & Markup**: 
-![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-
-**Backend & APIs**: 
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-512BD4?logo=dotnet&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white)
-
-**Frontend**:
-![Blazor](https://img.shields.io/badge/Blazor-512BD4?logo=blazor&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
-
-**Database & ORM**: 
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-0C344B?logo=prisma&logoColor=white)
-![Entity Framework](https://img.shields.io/badge/Entity_Framework-512BD4?logo=dotnet&logoColor=white)
-
-**DevOps & Tools**: 
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=github-actions&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
-
----
-
-### 📈 GitHub Stats
-
-<div align="center">
-  <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Adyllsxn&theme=transparent" alt="Stats"/>
+  <img src="./docs/logo.svg" alt="Fizzi Logo" width="20%" /> 
+  </br> </br>
   
-  <picture>
-    <source
-        srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Adyllsxn&theme=tokyonight"
-        media="(prefers-color-scheme: dark)">
-    <source 
-        srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Adyllsxn&theme=github"
-        media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-    <img height="200em" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Adyllsxn&theme=transparent" />
-  </picture>
+  [![GitHub](https://img.shields.io/badge/github-fizzi--ui-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/fizzi-ui)
+  [![Vercel](https://img.shields.io/badge/vercel-fizz1.vercel.app-000000?style=for-the-badge&logo=vercel)](https://fizz1.vercel.app)
+  [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+
 </div>
 
 ---
 
-### 📊 Development Analytics
+## **📖 SOBRE O PROJETO**
 
-<div align="center">
-  
-  <!-- Streak Stats -->
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Adyllsxn&theme=github-dark-blue&hide_border=true" alt="GitHub Streak" />
-  
-  <!-- Activity Graph -->
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Adyllsxn&theme=github-dark&hide_border=true&area=true" alt="Activity Graph" width="100%" />
-  
-</div>
+> **Fizzi** é uma experiência visual interativa em 3D desenvolvida com Next.js e Three.js. O projeto explora animações em tempo real, renderização de modelos 3D e efeitos visuais imersivos, inspirado no universo de marcas de refrigerante.
+
+**🎨 Inspiração:** Este projeto é uma releitura criativa do design original disponível em [fizzi.vercel.app](https://fizzi.vercel.app/), adaptado e desenvolvido com abordagem própria para fins de estudo e experimentação com tecnologias 3D na web.
+
+> 🟡 **Status:** Projeto em desenvolvimento
+
+### **✨ Funcionalidades:**
+```markdown
+✅ Modelo 3D interativo de lata de refrigerante
+✅ Troca de sabores com mudança de textura e cor de fundo
+✅ Controles de câmera (zoom, rotação, auto-rotação)
+✅ Efeito de partículas (Sparkles) e iluminação HDR
+✅ Interface moderna com glassmorphism e backdrop blur
+✅ Animações suaves com GSAP
+✅ Design responsivo e gradientes dinâmicos
+```
+---
+
+## **🛠️ TECNOLOGIAS**
+
+| Camada | Tecnologias |
+|--------|-------------|
+| **Runtime** | Next.js, TypeScript |
+| **3D** | Three.js, React Three Fiber, React Three Drei |
+| **Estilização** | Tailwind CSS, Tailwind Merge |
+| **Animações** | GSAP |
+| **Deploy** | Vercel |
 
 ---
 
-### 📫 Let's Connect!
+## **🚀 COMO RODAR LOCALMENTE**
+```bash
+# Clone o repositório
+git clone https://github.com/Adyllsxn/fizzi-ui.git
 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/_adyllsxn/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/_adyllsxn/)
+# Entre na pasta
+cd fizzi-ui
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+```
+> Acesse http://localhost:3000 para ver o projeto funcionando.
+
+--- 
+
+## **📄 LICENÇA**
+
+> Este projeto está sob a licença MIT, o que significa que é de código aberto e pode ser utilizado livremente para fins académicos, comerciais e profissionais, desde que mantidos os créditos.
+
+```markdown
+📚 Código aberto (open source)
+✅ Livre para uso académico e comercial
+🎨 Use como inspiração para seus projetos 3D
+```
 
 ---
 
-<!-- Footer estiloso com frase maneira -->
-<div align="center">
-  
-  ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=00d9ff&center=true&vCenter=true&width=600&lines=Building+the+future%2C+one+line+of+code+at+a+time;Code.+Create.+Conquer.;Turning+ideas+into+digital+reality;Web+%26+Mobile+Solutions+for+a+Connected+World)
-  
-</div>
+## **🙏 CRÉDITOS E REFERÊNCIAS**
+- Design original inspirado em `Fizzi`
+- Modelos 3D e texturas de uso demonstrativo
+- Desenvolvido como projeto de estudo para experimentação com Three.js e React Three Fiber
 
-<!-- Rodapé animado com efeito ondulado -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=120&section=footer" alt="Footer" style="width: 100%;" />
-</p>
+---
+
+> ⚠️ Aviso: Os modelos 3D e texturas são de uso demonstrativo. Para uso comercial, adquira as licenças adequadas. Este projeto não possui afiliação oficial com a marca original.
+
