@@ -55,14 +55,13 @@ export default function Footer() {
         {/* Grid principal - 2 colunas */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           
-          {/* Lado esquerdo - Marca em destaque */}
+          {/* Lado esquerdo - Marca com tipografia Alpino */}
           <div>
-            {/* Letra gigante com tipologia marcante */}
             <div className="mt-8">
-              <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white/10 select-none tracking-tighter">
+              <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white/10 select-none tracking-tighter font-alpino">
                 F I Z Z I
               </h2>
-              <p className="text-gray-500 text-sm mt-4 max-w-md">
+              <p className="text-gray-500 text-sm mt-4 max-w-md font-inter">
                 Soda perfeita. Saborosa. Feita para quem vive intensamente.
               </p>
             </div>
@@ -74,11 +73,11 @@ export default function Footer() {
               
               {/* Sabores */}
               <div>
-                <h3 className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 group-hover:pl-1 transition-all">Sabores</h3>
+                <h3 className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 font-inter">Sabores</h3>
                 <ul className="space-y-2">
                   {["Cherry", "Grape", "Lemon Lime", "Strawberry", "Watermelon"].map((flavor) => (
                     <li key={flavor}>
-                      <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block text-sm">
+                      <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block text-sm font-inter">
                         {flavor}
                       </a>
                     </li>
@@ -88,11 +87,11 @@ export default function Footer() {
 
               {/* Navegação */}
               <div>
-                <h3 className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4">Navegação</h3>
+                <h3 className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 font-inter">Navegação</h3>
                 <ul className="space-y-2">
                   {["Home", "Sabores", "Sobre"].map((item) => (
                     <li key={item}>
-                      <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block text-sm">
+                      <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block text-sm font-inter">
                         {item}
                       </a>
                     </li>
@@ -108,25 +107,25 @@ export default function Footer() {
 
         {/* Copyright e badges */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs">
+          <p className="text-gray-500 text-xs font-inter">
             © 2026 Fizzi. Todos os direitos reservados.
           </p>
           <div className="flex gap-4">
             <Link 
               href="https://github.com/Adyllsxn/fizzi-ui" 
               target="_blank"
-              className="text-gray-500 hover:text-orange-500 hover:scale-105 transition-all duration-300 text-xs inline-block"
+              className="text-gray-500 hover:text-orange-500 hover:scale-105 transition-all duration-300 text-xs inline-block font-inter"
             >
               GitHub
             </Link>
             <Link 
               href="https://fizzi-ui.vercel.app" 
               target="_blank"
-              className="text-gray-500 hover:text-orange-500 hover:scale-105 transition-all duration-300 text-xs inline-block"
+              className="text-gray-500 hover:text-orange-500 hover:scale-105 transition-all duration-300 text-xs inline-block font-inter"
             >
               Vercel
             </Link>
-            <span className="text-gray-600 text-xs">MIT License</span>
+            <span className="text-gray-600 text-xs font-inter">MIT License</span>
           </div>
         </div>
       </div>
