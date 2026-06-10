@@ -3,7 +3,7 @@
   </br> </br>
   
   [![GitHub](https://img.shields.io/badge/github-fizzi--ui-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/fizzi-ui)
-  [![Vercel](https://img.shields.io/badge/vercel-fizz1.vercel.app-000000?style=for-the-badge&logo=vercel)](https://fizz1.vercel.app)
+  [![Vercel](https://img.shields.io/badge/vercel-fizzi--ui.vercel.app-000000?style=for-the-badge&logo=vercel)](https://fizzi-ui.vercel.app)
   [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 
 </div>
@@ -57,6 +57,8 @@ npm install
 npm run dev
 ```
 > Acesse http://localhost:3000 para ver o projeto funcionando.
+
+> Acesse https://fizzi-ui.vercel.app/
 
 --- 
 
