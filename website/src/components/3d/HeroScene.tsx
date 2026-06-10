@@ -12,12 +12,12 @@ export function HeroScene() {
       <Canvas
         camera={{ position: [0, 0.5, 4], fov: 40 }}
         className="h-full w-full"
-        style={{ background: '#f5f0e8' }}
+        style={{ background: '#1a1a1a' }}
       >
         <Suspense fallback={null}>
           <Environment 
             files="/hdr/lobby.hdr" 
-            environmentIntensity={0.8}
+            environmentIntensity={0.3}
             background={false}
           />
           
