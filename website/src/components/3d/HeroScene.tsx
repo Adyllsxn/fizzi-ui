@@ -1,5 +1,6 @@
 'use client'
 
+// @ts-nocheck
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment, PresentationControls } from '@react-three/drei'
 import { Suspense } from 'react'

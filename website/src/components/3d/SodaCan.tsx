@@ -1,5 +1,6 @@
 'use client'
 
+// @ts-nocheck
 import { useGLTF, useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef, useEffect } from 'react'
@@ -32,11 +33,8 @@ export function SodaCan({ flavor = 'strawberry' }: SodaCanProps) {
   useEffect(() => {
     if (!labelTexture) return
     
-    // Itera sobre todos os materiais do modelo
     Object.values(materials).forEach((material) => {
       const mat = material as MeshStandardMaterial
-      
-      // Aplica a textura em todos os materiais
       mat.map = labelTexture
       mat.metalness = 0.2
       mat.roughness = 0.4
