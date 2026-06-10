@@ -1,6 +1,5 @@
-// src/app/page.tsx
 import Header from "@/components/layout/header/Header";
-import { Hero } from "./_components/Hero";
+import { Hero, About, AlternatingText } from "./sections";
 import Footer from "@/components/layout/footer/Footer";
 
 export default function Home() {
@@ -8,7 +7,9 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
+      <AlternatingText/>
+      <About/>
       <Footer />
     </main>
-  )
+  );
 }
