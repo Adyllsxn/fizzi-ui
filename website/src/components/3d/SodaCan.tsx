@@ -3,46 +3,50 @@
 // @ts-nocheck
 import { useGLTF, useTexture } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 import { Group, Mesh, MeshStandardMaterial } from 'three'
 
 interface SodaCanProps {
   flavor?: string
+  scale?: number
 }
 
-const flavorImages: Record<string, string> = {
-  cherry: '/labels/cherry.png',
+const flavorTextures = {
+  lemonLime: '/labels/lemon-lime.png',
   grape: '/labels/grape.png',
-  'lemon-lime': '/labels/lemon-lime.png',
-  strawberry: '/labels/strawberry.png',
-  watermelon: '/labels/watermelon.png'
+  blackCherry: '/labels/cherry.png',
+  strawberryLemonade: '/labels/strawberry.png',
+  watermelon: '/labels/watermelon.png',
 }
 
-export function SodaCan({ flavor = 'strawberry' }: SodaCanProps) {
-  const groupRef = useRef<Group>(null)
-  const { scene, materials } = useGLTF('/Soda-can.gltf')
-  const labelTexture = useTexture(flavorImages[flavor] || flavorImages.strawberry)
-  
-  useEffect(() => {
-    if (labelTexture) {
-      labelTexture.flipY = false
-      labelTexture.needsUpdate = true
-    }
-  }, [labelTexture])
+const metalMaterial = new MeshStandardMaterial({
+  roughness: 0.3,
+  metalness: 1,
+  color: '#bbbbbb',
+})
 
-  useEffect(() => {
-    if (!labelTexture) return
-    
-    Object.values(materials).forEach((material) => {
-      const mat = material as MeshStandardMaterial
-      mat.map = labelTexture
-      mat.metalness = 0.2
-      mat.roughness = 0.4
-      mat.color.setHex(0xffffff)
-      mat.needsUpdate = true
-    })
-    
-  }, [materials, labelTexture, flavor])
+const labelMaterial = new MeshStandardMaterial({
+  roughness: 0.15,
+  metalness: 0.7,
+})
+
+export function SodaCan({ flavor = 'strawberryLemonade', scale = 2 }: SodaCanProps) {
+  const groupRef = useRef<Group>(null)
+  const { nodes } = useGLTF('/Soda-can.gltf')
+  const labels = useTexture(flavorTextures)
+
+  // Corrige a orientação das texturas
+  labels.strawberryLemonade.flipY = false
+  labels.blackCherry.flipY = false
+  labels.watermelon.flipY = false
+  labels.grape.flipY = false
+  labels.lemonLime.flipY = false
+
+  const label = labels[flavor as keyof typeof flavorTextures]
+
+  // Atualiza o material da label com a textura correta
+  labelMaterial.map = label
+  labelMaterial.needsUpdate = true
 
   useFrame((state) => {
     if (groupRef.current) {
@@ -52,8 +56,28 @@ export function SodaCan({ flavor = 'strawberry' }: SodaCanProps) {
   })
 
   return (
-    <group ref={groupRef} scale={2.2}>
-      <primitive object={scene} />
+    <group ref={groupRef} scale={scale} rotation={[0, -Math.PI, 0]}>
+      {/* Corpo da lata (metal) */}
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={(nodes.cylinder as Mesh).geometry}
+        material={metalMaterial}
+      />
+      {/* Label da lata (textura) */}
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={(nodes.cylinder_1 as Mesh).geometry}
+        material={labelMaterial}
+      />
+      {/* Aba da lata (metal) */}
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={(nodes.Tab as Mesh).geometry}
+        material={metalMaterial}
+      />
     </group>
   )
 }

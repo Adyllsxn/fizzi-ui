@@ -2,7 +2,7 @@
 
 // @ts-nocheck
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Environment, PresentationControls } from '@react-three/drei'
+import { OrbitControls, Environment } from '@react-three/drei'
 import { Suspense } from 'react'
 import { SodaCan } from './SodaCan'
 
@@ -26,16 +26,7 @@ export function HeroScene() {
           <pointLight position={[0, 2, 3]} intensity={0.8} color="#ffffff" />
           <pointLight position={[1, 0.5, 2]} intensity={0.5} color="#ffaa66" />
           
-          <PresentationControls
-            global
-            rotation={[0, 0.5, 0]}
-            polar={[-Math.PI / 4, Math.PI / 4]}
-            azimuth={[-Math.PI / 3, Math.PI / 3]}
-            config={{ mass: 2, tension: 400 }}
-            snap={{ mass: 4, tension: 1000 }}
-          >
-            <SodaCan />
-          </PresentationControls>
+          <SodaCan flavor="strawberryLemonade" scale={2} />
           
           <OrbitControls 
             enableZoom={true}
