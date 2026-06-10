@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@prismicio/next": "^2.2.4",
     "@react-three/drei": "^9.111.3",
     "@react-three/fiber": "^8.17.6",
     "autoprefixer": "^10.5.0",

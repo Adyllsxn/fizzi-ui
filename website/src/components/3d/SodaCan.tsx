@@ -2,11 +2,10 @@
 
 // @ts-nocheck
 import { useGLTF, useTexture } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
 import { Group, Mesh, MeshStandardMaterial } from 'three'
 
-interface SodaCanProps {
+export interface SodaCanProps {
   flavor?: string
   scale?: number
 }
@@ -35,7 +34,6 @@ export function SodaCan({ flavor = 'strawberryLemonade', scale = 2 }: SodaCanPro
   const { nodes } = useGLTF('/Soda-can.gltf')
   const labels = useTexture(flavorTextures)
 
-  // Corrige a orientação das texturas
   labels.strawberryLemonade.flipY = false
   labels.blackCherry.flipY = false
   labels.watermelon.flipY = false
@@ -43,35 +41,23 @@ export function SodaCan({ flavor = 'strawberryLemonade', scale = 2 }: SodaCanPro
   labels.lemonLime.flipY = false
 
   const label = labels[flavor as keyof typeof flavorTextures]
-
-  // Atualiza o material da label com a textura correta
   labelMaterial.map = label
   labelMaterial.needsUpdate = true
 
-  useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.getElapsedTime() * 0.12) * 0.06
-      groupRef.current.position.y = Math.sin(state.clock.getElapsedTime() * 0.8) * 0.01
-    }
-  })
-
   return (
     <group ref={groupRef} scale={scale} rotation={[0, -Math.PI, 0]}>
-      {/* Corpo da lata (metal) */}
       <mesh
         castShadow
         receiveShadow
         geometry={(nodes.cylinder as Mesh).geometry}
         material={metalMaterial}
       />
-      {/* Label da lata (textura) */}
       <mesh
         castShadow
         receiveShadow
         geometry={(nodes.cylinder_1 as Mesh).geometry}
         material={labelMaterial}
       />
-      {/* Aba da lata (metal) */}
       <mesh
         castShadow
         receiveShadow
