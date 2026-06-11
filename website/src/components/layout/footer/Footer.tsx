@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="relative bg-[#0a0a0a] pt-16 sm:pt-20 pb-8 sm:pb-10 overflow-hidden">
       
@@ -52,54 +52,14 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Grid principal - 2 colunas */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          
-          {/* Lado esquerdo - Marca com tipografia Alpino */}
-          <div>
-            <div className="mt-8">
-              <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white/10 select-none tracking-tighter font-alpino">
-                F I Z Z I
-              </h2>
-              <p className="text-gray-500 text-sm mt-4 max-w-md font-inter">
-                Soda perfeita. Saborosa. Feita para quem vive intensamente.
-              </p>
-            </div>
-          </div>
-
-          {/* Lado direito - Links */}
-          <div>
-            <div className="grid grid-cols-2 gap-8">
-              
-              {/* Sabores */}
-              <div>
-                <h3 className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 font-inter">Sabores</h3>
-                <ul className="space-y-2">
-                  {["Cherry", "Grape", "Lemon Lime", "Strawberry", "Watermelon"].map((flavor) => (
-                    <li key={flavor}>
-                      <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block text-sm font-inter">
-                        {flavor}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Navegação */}
-              <div>
-                <h3 className="text-orange-500 font-bold text-sm uppercase tracking-wider mb-4 font-inter">Navegação</h3>
-                <ul className="space-y-2">
-                  {["Home", "Sabores", "Sobre"].map((item) => (
-                    <li key={item}>
-                      <a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 transition-all duration-300 inline-block text-sm font-inter">
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+        {/* Marca centralizada */}
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white/10 select-none tracking-tighter font-alpino">
+            F I Z Z I
+          </h2>
+          <p className="text-gray-500 text-sm mt-4 max-w-md font-inter">
+            Soda perfeita. Saborosa. Feita para quem vive intensamente.
+          </p>
         </div>
 
         {/* Linha divisória */}
