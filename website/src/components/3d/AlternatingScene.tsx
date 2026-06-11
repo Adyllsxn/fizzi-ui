@@ -10,22 +10,12 @@ export interface SodaCanProps {
   scale?: number;
 }
 
-// Mapeamento direto do flavor para o arquivo da label
-const getLabelPath = (flavor: string) => {
-  switch(flavor) {
-    case 'strawberryLemonade':
-      return '/labels/strawberry.png';
-    case 'grape':
-      return '/labels/grape.png';
-    case 'blackCherry':
-      return '/labels/cherry.png';
-    case 'lemonLime':
-      return '/labels/lemon-lime.png';
-    case 'watermelon':
-      return '/labels/watermelon.png';
-    default:
-      return '/labels/strawberry.png';
-  }
+const flavorTextures = {
+  strawberryLemonade: '/labels/strawberry.png',
+  grape: '/labels/grape.png',
+  blackCherry: '/labels/cherry.png',
+  lemonLime: '/labels/lemon-lime.png',
+  watermelon: '/labels/watermelon.png',
 };
 
 const metalMaterial = new MeshStandardMaterial({
@@ -38,17 +28,18 @@ export function SodaCan({ flavor = 'strawberryLemonade', scale = 2 }: SodaCanPro
   const groupRef = useRef<Group>(null);
   const { nodes } = useGLTF('/Soda-can.gltf');
   
-  // Carrega a textura correta baseada no flavor
-  const labelPath = getLabelPath(flavor);
-  const labelTexture = useTexture(labelPath);
+  // Carrega todas as texturas
+  const textures = useTexture(flavorTextures);
+  
+  // Aplica a textura correta baseada no flavor
+  const labelTexture = textures[flavor as keyof typeof flavorTextures];
   
   useEffect(() => {
     if (labelTexture) {
       labelTexture.flipY = false;
       labelTexture.needsUpdate = true;
-      console.log('Carregando label:', labelPath, 'para sabor:', flavor);
     }
-  }, [labelTexture, flavor]);
+  }, [labelTexture]);
 
   return (
     <group ref={groupRef} scale={scale} rotation={[0, -Math.PI, 0]}>

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/logo.svg" alt="Fizzi Logo" width="20%" /> 
+  <img src="./assets/logo.svg" alt="Fizzi Logo" width="30%" /> 
   </br> </br>
   
   [![GitHub](https://img.shields.io/badge/github-fizzi--ui-181717?style=for-the-badge&logo=github)](https://github.com/Adyllsxn/fizzi-ui)
@@ -13,10 +13,6 @@
 ## **📖 SOBRE O PROJETO**
 
 > **Fizzi** é uma experiência visual interativa em 3D desenvolvida com Next.js e Three.js. O projeto explora animações em tempo real, renderização de modelos 3D e efeitos visuais imersivos, inspirado no universo de marcas de refrigerante.
-
-**🎨 Inspiração:** Este projeto é uma releitura criativa do design original disponível em [fizzi.vercel.app](https://fizzi.vercel.app/), adaptado e desenvolvido com abordagem própria para fins de estudo e experimentação com tecnologias 3D na web.
-
-> 🟡 **Status:** Projeto em desenvolvimento
 
 ### **✨ Funcionalidades:**
 ```markdown
@@ -42,13 +38,28 @@
 
 ---
 
-## **🚀 COMO RODAR LOCALMENTE**
+## 📸 DEMO
+<div align="center"> <img src="./assets/demo.svg" alt="PalancaFood Landing Page" width="65%" /> <br /> <i>Interface principal</i> </div>
+
+---
+
+## **PRÉ-REQUISITOS**
+
+Antes de começar, certifique-se de ter atendido aos seguintes requisitos:
+
+* [Git](https://git-scm.com/downloads "Download Git") deve estar instalado no seu sistema operacional.
+
+### Executar Localmente
+
+Para executar o **Foodie** localmente, execute este comando no seu git bash:
+
+
 ```bash
 # Clone o repositório
 git clone https://github.com/Adyllsxn/fizzi-ui.git
 
 # Entre na pasta
-cd fizzi-ui
+cd fizzi-ui/website
 
 # Instale as dependências
 npm install
@@ -56,28 +67,21 @@ npm install
 # Rode o projeto
 npm run dev
 ```
-> Acesse http://localhost:3000 para ver o projeto funcionando.
+> Local http://localhost:3000 
 
-> Acesse https://fizzi-ui.vercel.app/
+> Remoto https://fizzi-ui.vercel.app/
 
 --- 
 
-## **📄 LICENÇA**
+## **📌 CRÉDITOS**
 
-> Este projeto está sob a licença MIT, o que significa que é de código aberto e pode ser utilizado livremente para fins académicos, comerciais e profissionais, desde que mantidos os créditos.
-
-```markdown
-📚 Código aberto (open source)
-✅ Livre para uso académico e comercial
-🎨 Use como inspiração para seus projetos 3D
-```
+Inspirado no projeto [Fizzi](https://github.com/prismicio-community/course-fizzi-next) de [prismicio-community](https://github.com/prismicio-community)
 
 ---
 
-## **🙏 CRÉDITOS E REFERÊNCIAS**
-- Design original inspirado em `Fizzi`
-- Modelos 3D e texturas de uso demonstrativo
-- Desenvolvido como projeto de estudo para experimentação com Three.js e React Three Fiber
+## **📄 LICENÇA**
+
+> Este projeto está sob a licença **MIT**. Isso significa que você pode usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do software, desde que mantenha o aviso de copyright original.
 
 ---
 
